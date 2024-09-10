@@ -2,7 +2,9 @@ The aim of this work is to calculate the optical flow using the Luca-Kanade algo
 I created 2 files, one containing the optical flow calculation function called LucasKanade and a file that calls the function and calculates the optical flow, called OpticalFLow.
 
 
-LucasKanade function
+
+**LucasKanade function**
+```
 • The function takes two images as arguments, window size and threshold, and returns vectors u and v.
 • The output of the convolutional layer is the same size as its output entrance, achieved by adding padding to the input.
 • Convolution is used to calculate Ix, Iy, and It, using image 1 for the first two and the difference of the two images for It.
@@ -12,8 +14,11 @@ LucasKanade function
 • For each pixel (i,j), a 2x2 matrix A_window and a vector b_window are calculated by averaging over a local window centered at (i,j).
 • The eigenvalues of A_window are calculated to check if the array is invertible. If the smallest eigenvalue is less than the limit, the optical flow for that pixel is set to zero.
 • The optical flow for pixel (i,j) is calculated as nu = -inv(A_window) * b_window.
+```
 
-OpticalFlow
+
+**OpticalFlow**
+```
 • The function calculates the vectors u and v from two images, using the window size and threshold as arguments.
 • The convolutional layer's output size is the same as its input entrance, allowing convolutional layers to retain spatial information about the input image.
 • The function calculates the system components for each pixel to estimate the optical flow vectors, using the gradients of the first frame, the difference between the two frames, and their products.
