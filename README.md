@@ -1,6 +1,7 @@
 The aim of this work is to calculate the optical flow using the Luca-Kanade algorithm for two consecutive frames.
 I created 2 files, one containing the optical flow calculation function called LucasKanade and a file that calls the function and calculates the optical flow, called OpticalFLow.
 
+
 LucasKanade function
 • The function takes two images as arguments, window size and threshold, and returns vectors u and v.
 • The output of the convolutional layer is the same size as its output entrance, achieved by adding padding to the input.
